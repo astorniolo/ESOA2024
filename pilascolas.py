@@ -12,7 +12,8 @@ pila.append("Ana")
 pila.append("ultimo")
 #pop
 ultimoelemento=pila.pop() #recibo el valor devuelto en una variabñe
-print(ultimoelemento)     
+print(ultimoelemento) #
+     
 
 
 #COLAS  FIFO  Primero en entrar primero en salir 
