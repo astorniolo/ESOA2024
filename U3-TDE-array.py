@@ -39,11 +39,8 @@ primero= unidadesNavales[0]
 print("primer elemento:",primero)  # AVES
 # Acceso y modificacion
 unidadesNavales[0] = "AVEStruz"
-<<<<<<< HEAD
-print("primer elemento ñluego de modificar:",unidadesNavales[0])  
-=======
+ 
 print("primer elemento luego de modificar:",unidadesNavales[0])  
->>>>>>> 32e6dfb2f6b69aea64268bb215ca17083e67433f
 print("unidades navales luego de modificar:",unidadesNavales)
 
 avisos=["AVIR","AVTO","AVBA","AVES","AVIM","AVPA"]
@@ -66,23 +63,36 @@ print ("cantidad de elementos de unidadesnavales2",cantidadUnidadesNavales2)
 
 print("la cantidad de avisos  es ",len(unidadesNavales[0]))
 #recorrido de un array
-print("recorrido for i")
+print("recorrido for i 11111111111111111111111111111111111111")
 for i in range(len(unidades_navales_por_tipo)):
     print(f"i:{i} contiene {unidades_navales_por_tipo[i]}")
 print()
-print("recorrido por tipo")
+
+
 #recorrido por tipo de unidad
+print("recorrido por tipo 222222222222222222222222222222222222")
 for tipo in unidades_navales_por_tipo:
     print(tipo)
+
 #recorrido por unidades de cada tipo
 print() 
-print("recorrido por tipò y por unidad de cada tipo")
+print("recorrido por tipò y por unidad de cada tipo  33333333333333333333333333333")
 for tipo in unidades_navales_por_tipo:
     print(tipo)  
     print("    Unidades individuales")
     for unidad in tipo:
         print("    ",unidad) 
 
+#recorrido por unidades de cada tipo
+print() 
+print("recorrido por tipò y por unidad de cada tipo  con  for anidados i j  44444444444444444444444444444")
+for i in range(len(unidades_navales_por_tipo)):
+    print(f"TIPO i:{i} contiene {unidades_navales_por_tipo[i]}")
+    print("    Unidades individuales")
+    for j in range (len(unidades_navales_por_tipo[i])) :
+        print(f"     tipo {i} Unidad {j} => unidades_navales_por_tipo[{i}][{j}] : {unidades_navales_por_tipo[i][j]}") 
+
+              
 # Añadir
 # para añadir elementos a tu array en Python, 
 # lo mejor es utilizar el método “append ( )”.
