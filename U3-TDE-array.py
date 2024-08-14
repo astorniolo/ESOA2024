@@ -39,7 +39,7 @@ primero= unidadesNavales[0]
 print("primer elemento:",primero)  # AVES
 # Acceso y modificacion
 unidadesNavales[0] = "AVEStruz"
-print("primer elemento ñluego de modificar:",unidadesNavales[0])  
+print("primer elemento luego de modificar:",unidadesNavales[0])  
 print("unidades navales luego de modificar:",unidadesNavales)
 
 avisos=["AVIR","AVTO","AVBA","AVES","AVIM","AVPA"]
