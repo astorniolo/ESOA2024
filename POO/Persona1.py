@@ -30,9 +30,9 @@ print(andrea.edad())
 #print(andrea.__tienepecas)
 print(andrea._tienelunares)
 print(andrea.tienecanas)
-andrea.__tienepecas=True
+#andrea.__tienepecas=True
 andrea._tienelunares=True
 andrea.tienecanas=True
-print(andrea.__tienepecas)
+#print(andrea.__tienepecas)
 print(andrea._tienelunares)
 print(andrea.tienecanas)

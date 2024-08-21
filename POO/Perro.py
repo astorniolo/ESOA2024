@@ -22,14 +22,19 @@ class Perro:
     # # Se puede reemplazar el método imprimir() con __str__()
     # def __str__(self):
     #     return f'{self.nombre} es un {self.raza} {self.color} y tiene {self.edad} años.'
+#FIN CLASE PERRO
 
+    
+##############################################################
+##                      Main                         *********
+##############################################################
 miMascota = Perro("Renata", 9, "coker","te con leche")
 print(miMascota)
 print("observar que imprimieo la direccion Heap del OBJETO")
 
 print("en la funcion impromir se retorna un string si no o recibo o no hago nada no pasa nada")
 miMascota.imprimir()
-print("que susece ahora")
+print("que sucede ahora")
 print(miMascota.imprimir())
 impresion=miMascota.imprimir()
 print(impresion)
