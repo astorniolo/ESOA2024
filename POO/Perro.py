@@ -30,7 +30,7 @@ class Perro:
 ##############################################################
 miMascota = Perro("Renata", 9, "coker","te con leche")
 print(miMascota)
-print("observar que imprimieo la direccion Heap del OBJETO")
+print("observar que imprimió la direccion Heap del OBJETO")
 
 print("en la funcion impromir se retorna un string si no o recibo o no hago nada no pasa nada")
 miMascota.imprimir()
