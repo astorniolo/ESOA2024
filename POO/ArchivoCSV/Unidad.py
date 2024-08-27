@@ -20,5 +20,6 @@ class Unidad:
         return True if self.idUnidad==id else False
 
 # ##########
-# u=Unidad(73,"CBSP","CORBETA ARA SPIRO",3)
-# print(u)
+u=Unidad(73,"CBSP","CORBETA ARA SPIRO",3)
+print(Tipo(u.tipoUnidad))
+print(u)
