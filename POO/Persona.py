@@ -52,4 +52,5 @@ class Persona: #Creamos la clase (class + sustantivo en singular en mayúscula)
 andrea=Persona("Andrea","Storniolo",55) #Creamos un objeto
 print(andrea)
 andrea.nombre="Andreita"
+print(andrea.nombre)
 print(andrea)
