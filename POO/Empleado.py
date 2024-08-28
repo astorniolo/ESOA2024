@@ -18,6 +18,7 @@ class Empleado:
         else:
             print("No paga impuestos  a las ganancias")
 
+
 # Bloque Principal
 empleado1=Empleado()
 empleado1.imprimir()

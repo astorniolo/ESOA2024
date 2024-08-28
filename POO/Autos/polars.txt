@@ -1,0 +1,101 @@
+Buenos días y gracias por la sesión. Será grabada la sesión?
+respuesta de Moderador
+Moderador
+Sí, en unos días la vamos a subir a nuestro canal de YT -> https://www.youtube.com/channel/UCWDBxqxaHlQ7P--LYLqAJq
+Podrían compartir la fuente de la imagen porfa
+respuesta de Moderador
+Moderador
+12:07 PM
+https://pola.rs/posts/benchmarks/
+
+polars nos es comp distribuida comparado con sparks
+ varios hilos procesando en 
+
+perfoma mejor paraleleismo  lazy evaluation majejo de memoria (.....)47:min
+-----
+Como se lleva polars con los pipeline de sklearn, es compatible?
+respuesta de Moderador:12:10 PM
+a partir de sklearn 1.4 es compatible
+
+
+Yadir Acuña
+Perdona podrías, repetir la explicación del diagrama?, si no entendí mal, polar facilitaría, las consultas gracias las cargas lazzy?
+respuesta de Moderador :La performance se gana por varias cosas: paralelismo, lazy evaluation, procesamiento columnar, y un etcétera, pero lo anterior a mi criterio es lo más relevante.
+
+Anónimo
+¿Cómo se define el uso de lazy evaluation, es un tema de configuración?
+respuesta de Moderador, Si, es un parametro que se le habilita en el momento de usar el plan de ejecucion
+
+Anónimo
+¿Dónde puedo encontrar la documentación de Polars?
+respuesta de Moderador  https://docs.pola.rs/
+
+Anónimo 1
+buenos días una consulta, Polars es similar a Pandas, pero funciona bajo computación distribuida, es correcto?
+respuesta de Moderador
+No. No hace falta usar un sistema distribuido. El paralelismo lo gana aprovechando los recursos de la máquina que tengas (hilos en los distintos cores que tengas)
+
+Julio Arismendi 1
+Es muy importante destacar que para que Polars trabaje optimamente y no escanee toda la data historica es ncecesario establecer una adecuada tecnica de particionamiento de datos y en un formato con soporte ACID en lo posible como Delta
+Pregunta de Nicolas
+
+Nicolas 3
+Yo utilicé polars para leer un archivo csv de 3 millones de filas y el rendimiento fue espectacular, con Panda fue imposible. Lo usé en google colab y en mi pc particular
+respuesta de Moderador :   Pandas ejecuta con un proceso vs polars que está procesnado con varios hilos
+
+Andrés
+Hola, una consulta, cuando se hace ejecuciones SQL con polars se ve afectado el rendimiento? Lo consulto porque, por ejemplo SparkSQL no suele responder igual de bien que Spark. No sé si acá aplique igual o conserva el rendimiento.
+respuesta de Moderador : Correcto, el rendimiento es igual de eficiente.
+
+
+
+Polars ¿con cual de los tres formatos de almacenamiento (Delta, Iceberg, Hudi), tiene mayor soporte no solo de lectura sino de escritura?
+Alberto
+12:19 PM
+
+
+Pregunta de Juan David Cardozo
+Cuando leo un archivo CSV y que tipo de archivo me retorna polars?
+respuesta de Moderador: Un dataframe de polars
+
+
+Julio Arismendi
+Han tenido la oportunidad de explorar Daft e Ibis. Si es asi ¿cual ha sido la experiencia?
+respuesta de Moderador: Ibis sí. Está buenísimo y tiene soporte para casi todo. Pero lo que viene a resolver es distinto a Polars (se usaría, por ejemplo, sobre polars): unifica la capa de acceso con un sólo "meta"-lenguaje.
+respuesta de Moderador: No hemos encontrado todavía casos para implementarlo en el mundo real.
+respuesta de Moderador: Ibis es muy buena opciones, pero Daft, tene en cuenta la comunidad y la cantidad de commit, para que tengas buen soporte y no llegues a un punto donde no tengas como resolver algun problema.
+
+Alejandro :  ¿Se puede almacenar en archivos separados parquet por Año-Mes? 2024-01 Data.parquet 2024-02 Data.parquet ... 2024-08 Data.parquet
+respuesta de Moderador : Sí, claro. La forma prolija de hacerlo sería particionar tu tabla por año mes.
+
+Pregunta de Julio Arismendi
+Julio Arismendi
+12:34 PM
+
+¿que parametros o lineamientos tuvieron en cuenta para establecer Particiones Optimas para lectura y escritura?
+respuesta de Moderador: Ahí va
+
+Qué tanto se redujeron los costos al implementar polars? mencionaron que anteriormente podían ser 700 USD por mes.
+respuesta de Moderador: spoiler alert: 50 USD
+
+python Polars  gratis https://discord.gg/2E2BKfng
+
+
+Pregunta de usuario anónimo
+Que herramienta usaron para las pruebas de concurrencia?
+respuesta de Moderador:   jmeter
+
+Pregunta de Andrés
+Tienen documentación donde se desarrollen ejemplos como los que nos mostraron en el webinar?
+
+Pregunta de Tomasteawita: ¿Los costos actuales de la solución es comparando las azure functions contra que otra solución?
+respuesta de Moderador: Respecto a la arquitectura inicial, donde usábamos Cosmos DB
+
+Pregunta de carlos.crespo
++1 a la mención de la legilibilidad. Eso también hunde un costo y cuando se hace evidente ya es tarde :P
+respuesta de Moderador: Así es, es bueno revisar constantemente y generación de alertas de consumo que nos permita tomar decisión a tiempo.
+
+
+
+
+datalytics.hiringroom.com/jobs
