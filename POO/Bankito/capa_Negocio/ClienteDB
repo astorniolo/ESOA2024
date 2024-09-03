@@ -34,13 +34,13 @@ class ClientDB(Database):
         self.comitear()
 
 #-------------------
-gestioncliente=ClientDB()
+#gestioncliente=ClientDB()
 # listacliente=gestioncliente.traer_Todos()
 # print(listacliente)
 # cliente4=gestioncliente.traer_uno(4)
 # print(cliente4)
 # gestioncliente.crear_nuevo(5,"Magie Simpson","Siempre Viva 123")
 # gestioncliente.actualizar(5,'Magie Simpson','SiempreViva 1234')
-gestioncliente.borrar(5)
-print(gestioncliente.traer_Todos())
-gestioncliente.close()
+# gestioncliente.borrar(5)
+# print(gestioncliente.traer_Todos())
+#gestioncliente.close()
