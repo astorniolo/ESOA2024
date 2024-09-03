@@ -1,0 +1,207 @@
+1) SCRIPT BANCO   => ejecutar 1-scriptBancoMySQL
+2) Preparar estructura de carpetas
+3) CAPA NEGOCIO
+    extension XML Tools
+    extensiones (ver teoria)
+
+            extensiones 
+                Mysql
+                mySql Sintax
+                mySql-Inline-decorator
+
+            conector Python-Mysql
+                pip install mysql-connector-python  (https://pypi.org/project/mysql-connector-python/)
+
+    crear conexión y chequear 
+    
+• Prepara la estructura de carpetas para el sistema : 
+        ◦ Crear Carpeta  con 2 subcarpetas en una ubicaremos el  los archivos de la capa vista
+         y en la otra los archivos de la capa negocio
+            ▪ En la Capa negocio agregaremos las clases necesaria que nos conectan a la base de datos
+              que ya hemos aprendido junto con un archivo __init__.py para indicarle a pyton que 
+              consideramos esa carpeta como un paquete
+            ▪ en la capa vista guardaremos todos los archivos que hacen a la USER INTERFACE 
+             del sistema
+            ▪ por ultimo creamos el archivo que gestionara la aplicación 
+
+◦  hacemos git init 
+
+◦ MOVER A TERMINAL POWERSHELL
+    pip install mysql-connetor-python
+    pip list
+    #### 
+
+crear DataBase.py para conectarme y desconectar de la bd
+Agragar codigo   class Database    
+crear Cliente.py
+
+
+
+    • Para crear las interfaces de usuario nececitamos alguna interface  tkinter o QT
+        ◦ para esta practica elegi QT (a pedido del publico presente)
+        ◦ para ayuda de uso  :https://build-system.fman.io/pyqt5-tutorial
+          
+    • PASOS de INSTALACION:
+        ◦ QT 
+        ◦ instalamos  extension PYQT integration    y  QT for python
+        ◦ pip install pyqt5
+        ◦ pip install pyqt5-tools
+        ◦ si hay errrores : instalamos extension PYQT integration    y QT for python
+          desde la pagina de QT       
+        ◦ https://build-system.fman.io/qt-designer-download   descarga un qt-designer setup lo ejecutamos …
+        ◦ Por ultimo podemos hacer  lo siguiente 
+                • pip install pyqt5designer
+        ◦ y abrimos el qt desde terminal con cmd designer
+
+◦ DENTRO de QT
+        ◦ Ya podemos empezar a creat nuestras ventanas en el designer :
+            ▪ newForm
+                • Main Window 
+                    ◦ CREATE
+            ▪ Cambio el nombre de la Ventana en propiedades
+                • window title : ………...nombre_Ventana….
+
+            ▪ Luego donde dice Type Here comienzo a Indicar mis menus………. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ◦ Incluso por ejemplo al comando salir le puedo asignar un SHORTCUT como <ctrl><q>
+
+
+
+
+
+
+
+
+
+
+
+
+        ◦ <CTRL><R> me permite ver como queda 
+        ◦ lo guardo en el directorio elegido CAPA VISTA  y vemos un archivo XML
+        ◦ para ello instalar extension xml tools
+ 
+
+
+
+
+    • y ejecutamos el programa que inicia la ejecucion del sistema  el cual contiene el sgte codigo
+
+import sys
+from PyQt5 import QtWidgets, uic
+from Capa_Negocios.aseguradora import *
+class iniciar:
+    def __init__(self):
+        app=QtWidgets.QApplication([])
+        self.ventana = uic.loadUi(".\\ClaseU1\\Aseguradora\\Capa_Vista\\vprincipal.ui")
+        self.ventana.show()
+                
+        app.exec()
+        
+        #sys.exit
+        
+###############################
+iniciar()
+
+
+y se abre la ventana!!!!!!!!!!!!!!!!!!!
+
+Ahora hay que comenzar a ejecutar acciones en funcion de la opcion de menu elegida 
+para ello conectamos una opción del menú con una función en el programa.
+Comenzamos con la mas fácil SALIR o sea terminar el sistema……
+   primero  busco el nombre que le asignamos en qt 
+   segundo lo conectamos a una fn
+self.ventana.actionSalir.triggered.connect(self.accionSalir)
+   tercero  definimos la funcion 
+def accionSalir(self): 
+        sys.exit()
+
+
+
+
+
+
+
+
+
+
+
+    • Es hora de comenzar a definir otras ventanas y llamar a nuesta capa de negocios
+    • Creamos una ventana para  CRUD de Autos
+    • CRUD
+        ◦ CREATE
+        ◦ READ
+        ◦ UPDATE
+        ◦ DELETE
+    • para ello comenzamos con labels  e Inputs
+    • en la parte de DISPLAY WIDGETS  encontramos  labels
+    • los Line Edit en la parte de INPUT WIDGETS 
+
+
+
+
+
+    • Podemos cambir tamaño e infinitas propiedades
+
+    • Agregamos un Horizontal Layout
+    • agregamos push buton en 
+        ◦ objet name=btnCancelar
+        ◦ text=Cancelar
+        ◦ y asi todos los botones lo mismo los lineEdit  le ponemos nombre 
+                  objet name =txtModelo
+
+
+        ◦ Ahora tenemos que hacer que al elegir un menu se habra esta ventanas 
+        ◦ por ejemplo    qaction es 
+                • actionAlta_de_Automovil
+
+
+
+Crear ejecutable
+
+Intalar el instalador (vaya la redundancia)
+			pip install pyinstaller
+
+luego me posiciono en el directorio dode esta la app y ejecuto
+
+
+
+                   pyinstaller  --windowed --onefile tuappp.py 
+si tengo un icono
+                     pyinstaller  --windowed --onefile –icon=./logo.ico    tuappp.py 
+
+carpeta dist  esta el exe
+
+
+
+Algunos materiales PYTHON
+    • https://perso.limsi.fr/pointal/_media/python:cours:mementopython3-espanol.pdf
+    • http://do1.dr-chuck.com/pythonlearn/ES_es/pythonlearn.pdf
+    • https://argentinaenpython.com/quiero-aprender-python/TutorialPython3.pdf
+    • 
+PyQT5: 
+Referencia rápida: 
+    • https://www.qt.io/
+    • https://build-system.fman.io/pyqt5-tutorial
+    • https://wiki.python.org/moin/PyQt
+    • https://build-system.fman.io/docs/
+    • https://build-system.fman.io/qt-designer-download
+      
+MySQL-Connector-Python: 
+
+    • https://dev.mysql.com/downloads/connector/python/
+    • https://pypi.org/project/mysql-connector-python/
+    • https://www.mysqltutorial.org/getting-started-mysql-python-connector/
