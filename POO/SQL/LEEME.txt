@@ -1,6 +1,6 @@
 1) SCRIPT BANCO   => ejecutar 1-scriptBancoMySQL
-2) Preparar eestructura de carpetas
-3) CAPA DATOS
+2) Preparar estructura de carpetas
+3) CAPA NEGOCIO
     extension XML Tools
     extensiones (ver teoria)
 
@@ -9,12 +9,11 @@
                 mySql Sintax
                 mySql-Inline-decorator
 
-            conectorPython-Mysql
-                pip install  mysql-connector-python
+            conector Python-Mysql
+                pip install mysql-connector-python  (https://pypi.org/project/mysql-connector-python/)
 
-    crear conexión y chequear
-
-
+    crear conexión y chequear 
+    
 • Prepara la estructura de carpetas para el sistema : 
         ◦ Crear Carpeta  con 2 subcarpetas en una ubicaremos el  los archivos de la capa vista
          y en la otra los archivos de la capa negocio
@@ -30,8 +29,13 @@
 ◦ MOVER A TERMINAL POWERSHELL
     pip install mysql-connetor-python
     pip list
+    #### 
 
+crear DataBase.py para conectarme y desconectar de la bd
 Agragar codigo   class Database    
+crear Cliente.py
+
+
 
     • Para crear las interfaces de usuario nececitamos alguna interface  tkinter o QT
         ◦ para esta practica elegi QT (a pedido del publico presente)
