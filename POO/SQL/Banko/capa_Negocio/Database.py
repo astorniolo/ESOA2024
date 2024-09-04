@@ -8,7 +8,7 @@ class Database:
         self.cnx = mySql.connect(
             host='localhost',
             user='root',
-            password='hepatalgina',
+            password='',
             db='banko'
         )
         self.cursor=self.cnx.cursor()
