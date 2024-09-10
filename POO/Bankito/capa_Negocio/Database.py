@@ -1,6 +1,6 @@
 import mysql.connector
 
-class Database:
+class Database():
     # Genero la apertura y cierre con la Base de Datos 
     def __init__(self):
         self.connection = mysql.connector.connect(

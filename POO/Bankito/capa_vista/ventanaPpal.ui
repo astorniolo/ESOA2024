@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1105</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sistema de Control de Bankito</string>
+  </property>
+  <property name="toolTip">
+   <string>ventana de inicio</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-image: url(C:/workspace/python2024/POO/Bankito/imagenes/banco.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1105</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCliente">
+    <property name="title">
+     <string>Cliente</string>
+    </property>
+    <addaction name="actionNuevo_Cliente"/>
+    <addaction name="actionActualizar_Cliente"/>
+    <addaction name="separator"/>
+    <addaction name="actionBorrar_Cliente"/>
+    <addaction name="separator"/>
+    <addaction name="actionBuscar_Cliente"/>
+    <addaction name="actionListar_todos_los_clientes"/>
+   </widget>
+   <widget class="QMenu" name="menuCuenta">
+    <property name="title">
+     <string>Cuenta</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuPrestamo">
+    <property name="title">
+     <string>Prestamo</string>
+    </property>
+    <addaction name="actionNuevo_Prestamo"/>
+   </widget>
+   <widget class="QMenu" name="menuSalida">
+    <property name="title">
+     <string>Salida</string>
+    </property>
+    <addaction name="actionSALIR"/>
+   </widget>
+   <addaction name="menuCliente"/>
+   <addaction name="menuCuenta"/>
+   <addaction name="menuPrestamo"/>
+   <addaction name="menuSalida"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNuevo_Cliente">
+   <property name="text">
+    <string>Nuevo Cliente</string>
+   </property>
+  </action>
+  <action name="actionActualizar_Cliente">
+   <property name="text">
+    <string>Actualizar Cliente</string>
+   </property>
+  </action>
+  <action name="actionBorrar_Cliente">
+   <property name="text">
+    <string>Borrar Cliente</string>
+   </property>
+  </action>
+  <action name="actionBuscar_Cliente">
+   <property name="text">
+    <string>Buscar Cliente</string>
+   </property>
+  </action>
+  <action name="actionListar_todos_los_clientes">
+   <property name="text">
+    <string>Listar todos los clientes</string>
+   </property>
+  </action>
+  <action name="actionNuevo_Prestamo">
+   <property name="text">
+    <string>Nuevo Prestamo</string>
+   </property>
+  </action>
+  <action name="actionSALIR">
+   <property name="text">
+    <string>SALIR</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

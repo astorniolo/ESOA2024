@@ -1,7 +1,8 @@
-from Database import *
+from capa_Negocio.Database import *
 
 class ClientDB(Database):
     def __init__(self):
+        bd="banko"
         super().__init__()
     
     def traer_Todos(self):
@@ -32,9 +33,15 @@ class ClientDB(Database):
         query=f"DELETE FROM cliente WHERE idCliente={id}"
         self.cursor.execute(query)
         self.comitear()
-
+    
+    def proximoId(self):
+        query=f"SELECT count(IdCliente) FROM banko.cliente"
+        self.cursor.execute(query)
+        ultimo=self.cursor.fetchone()
+        return ultimo[0] + 1  if ultimo else 1
 #-------------------
-#gestioncliente=ClientDB()
+# gestioncliente=ClientDB()
+# print(gestioncliente.proximoId())
 # listacliente=gestioncliente.traer_Todos()
 # print(listacliente)
 # cliente4=gestioncliente.traer_uno(4)
