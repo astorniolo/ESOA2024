@@ -23,7 +23,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1105, 680)
+        MainWindow.resize(1105, 585)
         MainWindow.setStyleSheet(u"QMainWindow {\n"
 "    background-image: url(C:/workspace/python2024/POO/Bankito/imagenes/banco.jpg);\n"
 "    background-repeat: no-repeat;\n"
@@ -43,6 +43,8 @@ class Ui_MainWindow(object):
         self.actionNuevo_Prestamo.setObjectName(u"actionNuevo_Prestamo")
         self.actionSALIR = QAction(MainWindow)
         self.actionSALIR.setObjectName(u"actionSALIR")
+        self.actionPoblar_widgets = QAction(MainWindow)
+        self.actionPoblar_widgets.setObjectName(u"actionPoblar_widgets")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         MainWindow.setCentralWidget(self.centralwidget)
@@ -57,6 +59,8 @@ class Ui_MainWindow(object):
         self.menuPrestamo.setObjectName(u"menuPrestamo")
         self.menuSalida = QMenu(self.menubar)
         self.menuSalida.setObjectName(u"menuSalida")
+        self.menu = QMenu(self.menubar)
+        self.menu.setObjectName(u"menu")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
@@ -66,6 +70,7 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuCuenta.menuAction())
         self.menubar.addAction(self.menuPrestamo.menuAction())
         self.menubar.addAction(self.menuSalida.menuAction())
+        self.menubar.addAction(self.menu.menuAction())
         self.menuCliente.addAction(self.actionNuevo_Cliente)
         self.menuCliente.addAction(self.actionActualizar_Cliente)
         self.menuCliente.addSeparator()
@@ -73,6 +78,8 @@ class Ui_MainWindow(object):
         self.menuCliente.addSeparator()
         self.menuCliente.addAction(self.actionBuscar_Cliente)
         self.menuCliente.addAction(self.actionListar_todos_los_clientes)
+        self.menuCliente.addSeparator()
+        self.menuCliente.addAction(self.actionPoblar_widgets)
         self.menuPrestamo.addAction(self.actionNuevo_Prestamo)
         self.menuSalida.addAction(self.actionSALIR)
 
@@ -93,9 +100,11 @@ class Ui_MainWindow(object):
         self.actionListar_todos_los_clientes.setText(QCoreApplication.translate("MainWindow", u"Listar todos los clientes", None))
         self.actionNuevo_Prestamo.setText(QCoreApplication.translate("MainWindow", u"Nuevo Prestamo", None))
         self.actionSALIR.setText(QCoreApplication.translate("MainWindow", u"SALIR", None))
+        self.actionPoblar_widgets.setText(QCoreApplication.translate("MainWindow", u"Poblar widgets", None))
         self.menuCliente.setTitle(QCoreApplication.translate("MainWindow", u"Cliente", None))
         self.menuCuenta.setTitle(QCoreApplication.translate("MainWindow", u"Cuenta", None))
         self.menuPrestamo.setTitle(QCoreApplication.translate("MainWindow", u"Prestamo", None))
         self.menuSalida.setTitle(QCoreApplication.translate("MainWindow", u"Salida", None))
+        self.menu.setTitle(QCoreApplication.translate("MainWindow", u"Administrador", None))
     # retranslateUi
 

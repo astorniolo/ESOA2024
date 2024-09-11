@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1105</width>
-    <height>680</height>
+    <height>585</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -44,6 +44,8 @@
     <addaction name="separator"/>
     <addaction name="actionBuscar_Cliente"/>
     <addaction name="actionListar_todos_los_clientes"/>
+    <addaction name="separator"/>
+    <addaction name="actionPoblar_widgets"/>
    </widget>
    <widget class="QMenu" name="menuCuenta">
     <property name="title">
@@ -62,10 +64,16 @@
     </property>
     <addaction name="actionSALIR"/>
    </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Administrador</string>
+    </property>
+   </widget>
    <addaction name="menuCliente"/>
    <addaction name="menuCuenta"/>
    <addaction name="menuPrestamo"/>
    <addaction name="menuSalida"/>
+   <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNuevo_Cliente">
@@ -101,6 +109,11 @@
   <action name="actionSALIR">
    <property name="text">
     <string>SALIR</string>
+   </property>
+  </action>
+  <action name="actionPoblar_widgets">
+   <property name="text">
+    <string>Poblar widgets</string>
    </property>
   </action>
  </widget>

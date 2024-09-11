@@ -1,9 +1,10 @@
 from PySide6.QtWidgets import QApplication, QMainWindow
 from capa_vista.ventanaPpal_ui import Ui_MainWindow
 from capa_vista.ventanaNuevoCliente import *
-
-# from formNuevoCliente import *
+from capa_vista.ventanaListarClientes import *
+from capa_vista.ventanaListado2 import *
 import sys
+
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -13,6 +14,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.actionNuevo_Cliente.triggered.connect(self.nuevo_cliente)
         self.actionActualizar_Cliente.triggered.connect(self.actualizar_cliente)
         self.actionSALIR.triggered.connect(self.salir)
+        self.actionListar_todos_los_clientes.triggered.connect(self.Listar_Clientes)
+        self.actionPoblar_widgets.triggered.connect(self.poblar)
+
+    def poblar(self):
+        ventana=VentanaListado2()
+        ventana.exec_()
+        
+    def Listar_Clientes(self):
+        ventana = VentanaListarClientes()
+        ventana.show
+        ventana.exec_()
+    
 
     def nuevo_cliente(self):
         # # Crear una instancia de la ventana "Nuevo Cliente"
