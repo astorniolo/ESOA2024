@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mi pagina desde la carpeta template</h1>
+    <h2 style="color: red"> Buenas tardes</h2>
+    <p>El nombre del profesor : {{profesor.upper}}</p>
+    <p>El nombre del alumno: {{alumno}}</p>
+    <p><strong>Lista de Materias</strong> del POSANOP</p>
+    <ul>
+        {% for materia in materias %}
+             <li>{{materia}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

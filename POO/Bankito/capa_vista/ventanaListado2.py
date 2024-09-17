@@ -31,8 +31,8 @@ class VentanaListado2(QDialog,Ui_VentanaListadoDeClientes):
 
         # Inicializo Valores del DIAL
         self.dial.setMinimum(0)
-        self.dial.setMaximum(100)
-        self.dial.setValue(50)  # Valor inicial
+        self.dial.setMaximum(20)
+        self.dial.setValue(10)  # Valor inicial
         self.dial.valueChanged.connect(self.actualizar_valor_dial)
 
         #timer 
